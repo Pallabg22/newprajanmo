@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OurSocialWorksEvent&UpcomingProjects,Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>OurSocialWorksEvent&UpcomingProjects,Events</h1>
+    <section id="social-works">
+  <h2>Our Social Works</h2>
+  <ul>
+    <li>🩸 Blood Donation Camps</li>
+    <li>🩺 Health Awareness Camps</li>
+    <li>🌱 Tree Plantation Drives</li>
+  </ul>
+
+  <h3>Upcoming Projects & Events</h3>
+  <p>🚀 <strong>Upcoming Project:</strong> <span style="color: crimson;">Red Drops</span></p>
+</section>
+<section id="upcoming-projects">
+  <h2>Upcoming Projects & Events</h2>
+  
+  <div class="project">
+    <h3>🔴 Project: Red Drops</h3>
+    <p><strong>About:</strong> "Red Drops" is our upcoming initiative focused on organizing large-scale blood donation drives across multiple locations to support emergency medical needs and save lives.</p>
+    <p><strong>Launch Date:</strong> Coming Soon</p>
+  </div>
+</section>
+<section>
+    <div class="event">
+    <h3>📅 IndependenceDay</h3>
+    <p><strong>Date:15August</strong> </p>
+    <img src="happy-independence-day.png" alt="Indian Indeoendance Day">
+    <p><strong>Details:A Proudable Day For India </strong> </p>
+  </div>
+</section>
+<br>
+<a class="Next-button" href="Magazine.html">Next-button</a>
+<a class="back-button" href="index.html">← Back to Home</a>
+<script>
+  // Show welcome alert on page load
+  window.addEventListener("DOMContentLoaded", function () {
+    alert("Welcome to Our Social Works Event & Upcoming Projects!");
+  });
+
+  // Highlight project div on hover
+  const projectDiv = document.querySelector('.project');
+  if (projectDiv) {
+    projectDiv.addEventListener('mouseenter', function () {
+      projectDiv.style.backgroundColor = "#ffe6e6";
+    });
+    projectDiv.addEventListener('mouseleave', function () {
+      projectDiv.style.backgroundColor = "";
+    });
+  }
+
+  // Alert when "Our Social Works" section is clicked
+  const socialWorksSection = document.getElementById('social-works');
+  if (socialWorksSection) {
+    socialWorksSection.addEventListener('click', function () {
+      alert("Thanks for checking out our social work initiatives!");
+    });
+  }
+
+  // Log when user clicks on the Independence Day image
+  const indepImg = document.querySelector('img[alt="Indian Indeoendance Day"]');
+  if (indepImg) {
+    indepImg.addEventListener('click', function () {
+      console.log("Independence Day image clicked.");
+      alert("Happy Independence Day! 🇮🇳");
+    });
+  }
+</script>
+
+</body>
+</html>
