@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contuct Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <h1>Contuct Us</h1>
+      <p>Mobile No</p>
+      <p>email: newprojonmo@gmail.com</p>
+<section>
+    <button>
+        <a href="mailto:newprajonmo@gmail.com">Email Us</a>
+    </button>
+</section>
+<br>
+<a class="Previous-Button" href="About.html">Previous-Button</a>
+<a class="backto-home" href="index.html">backto-home</a>
+<script>
+  // Confirm before leaving the page
+  document.querySelectorAll('.Previous-Button, .backto-home').forEach(button => {
+    button.addEventListener('click', function (e) {
+      const label = button.textContent.trim();
+      const go = confirm(`Are you sure you want to go to "${label}" page?`);
+      if (!go) {
+        e.preventDefault();
+        console.log(`Navigation cancelled to: ${label}`);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Handle email button click safely
+  const emailButton = document.querySelector('section button a');
+  emailButton.addEventListener('click', function () {
+    console.log("Attempting to open default mail client...");
+    // Note: Browser handles mailto. No full guarantee.
+    setTimeout(() => {
+      alert("If your email client did not open, please copy this email manually: newprajonmo@gmail.com");
+    }, 3000); // Alert after 3 seconds if nothing happened
+  });
+</script>
+
+</body>
+</html>
