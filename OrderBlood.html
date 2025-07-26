@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Blood</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Enquary-blood </h1>
+    <section id="order-blood" style="background-color: #fff3f3; padding: 20px; border-radius: 10px; margin-top: 20px;">
+  <h2 style="color: crimson;">🆘 Order Blood</h2>
+  <p>If you or someone you know needs blood urgently, we’re here to help. Submit a request and our team will reach out as soon as possible.</p>
+
+  <h3>What We Need:</h3>
+  <ul>
+    <li>Patient's Name</li>
+    <li>Required Blood Group</li>
+    <li>Hospital Name & Location</li>
+    <li>Contact Number</li>
+    <li>Urgency/Date</li>
+    <li>Unit Blood</li>
+    <li>Upload Requisitions</li>
+  </ul>
+
+  
+  <a href="https://forms.gle/Boytqa7X57TPH1cYA" target="_blank" style="display: inline-block; background-color: crimson; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+    📝 Request Blood Now
+  </a>
+
+  <p style="margin-top: 15px;">📧 Or email us at <a href="mailto:newprajonmo@gmail.com">newprajonmo@gmail.com</a></p>
+</section>
+<br>
+<a class="previous-button" href="BloodDonetion.html">Previous-Button</a>
+<br>
+<a class="Next-button" href="Gallary.html">Next-button</a>
+<br>
+<a class="backto-hmone" href="index.html">backto-hmoe</a>
+<script>
+  // Show alert when page loads
+  window.addEventListener('DOMContentLoaded', function () {
+    alert("🩸 If this is an emergency, please submit the request form immediately!");
+  });
+
+  // Confirm before redirecting to blood request form
+  const requestLink = document.querySelector('a[href*="forms.gle"]');
+  if (requestLink) {
+    requestLink.addEventListener('click', function (event) {
+      const confirmProceed = confirm("Do you want to proceed to the blood request form?");
+      if (!confirmProceed) {
+        event.preventDefault(); // stop link from opening
+      } else {
+        console.log("User proceeded to blood request form.");
+      }
+    });
+  }
+
+  // Animate highlight on section hover
+  const section = document.getElementById('order-blood');
+  if (section) {
+    section.addEventListener('mouseenter', () => {
+      section.style.boxShadow = '0 0 15px crimson';
+    });
+    section.addEventListener('mouseleave', () => {
+      section.style.boxShadow = 'none';
+    });
+  }
+</script>
+</body>
+</html>
