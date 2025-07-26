@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate blood</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="blood-donation" style="background-color:#f8f8f8; padding: 20px; border-radius: 10px; margin-top: 20px;">
+  <h2 style="color: crimson;">🩸 Blood Donation Camp</h2>
+  <p>We regularly organize blood donation camps to save lives and raise awareness about the importance of blood donation. Your one step can be someone's lifeline.</p>
+  <img src="Red Drops.jpg" alt="Red Drops" width="1200">
+    <p>Our Project is "Red Drops"</p>
+  <h3>Objectives:</h3>
+  <ul>
+    <li>Provide safe and free blood to those in need</li>
+    <li>Create awareness among youth about blood donation</li>
+    <li>Build a network of regular donors</li>
+  </ul>
+
+  <h3>Recent Camps:</h3>
+  <ul>
+    <li>📍 Panskura — 15th June 2025</li>
+  </ul>
+
+  <a href="mailto:newprajonmo@gmail.com?subject=Join%20Blood%20Donation%20Camp" style="display: inline-block; background-color: crimson; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; margin-top: 10px;">
+    Mail Us For Join as a Donor
+  </a> 
+</section>
+<h1 style="color: crimson;">Or</h1>
+<section style="background-color: #f8f8f8; padding: 20px; border-radius: 10px; margin-top: 20px;">
+    <a href="https://forms.gle/FT2LMsWyUe6xowncA" target="_blank" style="display: inline-block; background-color: crimson; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; margin-top: 10px;">
+    📝 Fill Up Form
+  </a>
+  <br>
+  <a class="Previous-button" href="Magazine.html">Previous-button</a>
+  <br>
+  <a class="Next-button" href="OrderBlood.html">Next button</a>
+  <a class="back-button" href="index.html">← Back to Home</a>
+</section>
+<br>
+       <script>
+  // Confirm before navigating to another page
+  document.querySelectorAll('.Previous-button, .Next-button, .back-button').forEach(button => {
+    button.addEventListener('click', function (event) {
+      const targetText = button.textContent.trim();
+      const confirmMessage = `Do you want to go to "${targetText}" page?`;
+      const userConfirmed = confirm(confirmMessage);
+
+      if (!userConfirmed) {
+        event.preventDefault();
+        console.log("Navigation cancelled by user.");
+      } else {
+        console.log(`Navigating to ${button.href}`);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Log form button clicks
+  const formBtn = document.querySelector('a[href*="forms.gle"]');
+  if (formBtn) {
+    formBtn.addEventListener('click', () => {
+      console.log("Form button clicked: Redirecting to Google Form.");
+    });
+  }
+
+  // Mailto interaction log
+  const mailBtn = document.querySelector('a[href^="mailto:"]');
+  if (mailBtn) {
+    mailBtn.addEventListener('click', () => {
+      console.log("Mail link clicked: Opening mail client.");
+    });
+  }
+</script>
+
+</body>
+</html>
