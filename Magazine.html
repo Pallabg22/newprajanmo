@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <h1>
+        Magazine
+    </h1>
+    <img src="Front Page RGB.JPG" alt="Magazine" height="200" width="500">
+  </main> 
+  <section>
+   <h4>Submit Your Manuscript</h4>
+  </section>
+  <section>
+  <h2>Click Here</h2>
+  <p>Please fill out the form below:</p>
+  <a href="https://forms.gle/TZFfL4oyxWvjKK7m7" target="_blank">Open Google Form</a>
+</section>
+<a class="Previous-Button" href="OurSocialWorksEvent&UpcomingProjects,Events.html">Previous-button</a>
+<br>
+<a class="Next" href="BloodDonetion.html">Next page</a>
+ <a class="back-button" href="index.html">← Back to Home</a>
+ <br>
+ <script>
+  // Show alert when page loads
+  window.addEventListener('DOMContentLoaded', function () {
+    alert("📝 Welcome! Ready to submit your manuscript for our magazine?");
+  });
+
+  // Confirm before opening Google Form
+  const formLink = document.querySelector('a[href*="forms.gle"]');
+  if (formLink) {
+    formLink.addEventListener('click', function (event) {
+      const confirmForm = confirm("Are you sure you want to open the manuscript submission form?");
+      if (!confirmForm) {
+        event.preventDefault();
+      } else {
+        console.log("User opened the Google Form for manuscript submission.");
+      }
+    });
+  }
+
+  // Add hover animation to the magazine image
+  const magazineImage = document.querySelector('img[alt="Magazine"]');
+  if (magazineImage) {
+    magazineImage.addEventListener('mouseenter', () => {
+      magazineImage.style.transform = "scale(1.05)";
+      magazineImage.style.transition = "transform 0.3s ease";
+    });
+    magazineImage.addEventListener('mouseleave', () => {
+      magazineImage.style.transform = "scale(1)";
+    });
+  }
+</script>
+
+</body>
+</html>
